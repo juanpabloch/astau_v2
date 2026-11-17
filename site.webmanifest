@@ -2,14 +2,14 @@
   "name": "ASTAU Yoga Studio · Recoleta, Buenos Aires",
   "short_name": "ASTAU",
   "description": "Espacio íntimo de práctica consciente de yoga y meditación en Recoleta, Buenos Aires.",
-  "start_url": "/",
+  "start_url": "/astau_v2/",
   "display": "standalone",
   "background_color": "#EEEAE4",
   "theme_color": "#5B2E44",
   "lang": "es-AR",
   "icons": [
     {
-      "src": "/favicon.svg",
+      "src": "/astau_v2/favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
