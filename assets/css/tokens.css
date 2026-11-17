@@ -1,0 +1,107 @@
+/* ==========================================================================
+   ASTAU — Tokens de diseño (Manual de Identidad Visual v1.1)
+   ========================================================================== */
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("../fonts/DMSans-Variable.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("../fonts/DMSans-Italic-Variable.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  /* Paleta cromática oficial (Pantone → Hex verificado según Manual sección 5.2) */
+  --c-bg: #EEEAE4;        /* Pantone 7527 C — Fondo general */
+  --c-accent: #5B2E44;    /* Pantone 7645 C — Acento: CTA, activos, cierre */
+  --c-text: #383838;      /* Pantone 447 C  — Texto principal y secundario chico (9,8:1) */
+  --c-surface: #D6D1CA;   /* Warm Gray 1 C  — Bloques alternos, placeholders */
+  --c-line: #C0B8B1;      /* Warm Gray 3 C  — Filetes y divisores (nunca texto) */
+  --c-muted: #7D776F;     /* Warm Gray 9 C  — Solo texto >= 24px (3,7:1 WCAG AA texto grande) */
+  --c-sage: #B3B7AE;      /* Pantone 421 C  — Superficies puntuales / meditación (nunca texto) */
+
+  /* Derivados funcionales sutiles dentro del sistema tonal */
+  --c-bg-translucent: rgb(238 234 228 / 0.92);
+  --c-accent-hover: #492336;
+  --c-hero-overlay: rgb(42 26 34 / 0.38);
+
+  /* Tipografía — Única familia: DM Sans */
+  --f-sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Escala tipográfica fluida (mobile 375px → desktop 1440px) */
+  --fs-display: clamp(2.75rem, 6.2vw + 1.25rem, 7rem);       /* 44 → 112 px */
+  --fs-quote: clamp(1.75rem, 2.6vw + 1.1rem, 3.5rem);        /* 28 → 56 px */
+  --fs-h2: clamp(1.875rem, 2.5vw + 1.2rem, 3.5rem);          /* 30 → 56 px */
+  --fs-h3: clamp(1.375rem, 0.8vw + 1.15rem, 1.875rem);       /* 22 → 30 px */
+  --fs-body: clamp(1.0625rem, 0.2vw + 1rem, 1.1875rem);      /* 17 → 19 px */
+  --fs-small: clamp(0.9375rem, 0.1vw + 0.9rem, 1rem);        /* 15 → 16 px (siempre en --c-text) */
+  --fs-label: clamp(0.75rem, 0.1vw + 0.72rem, 0.8125rem);    /* 12 → 13 px */
+
+  /* Pesos y tracking */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  --ls-display: -0.02em;
+  --ls-quote: 0.04em;
+  --ls-label: 0.12em;
+  --ls-wordmark: 0.28em;
+
+  --lh-tight: 1.08;
+  --lh-heading: 1.18;
+  --lh-quote: 1.28;
+  --lh-body: 1.6;
+
+  /* Ancho de lectura máximo */
+  --measure: 62ch;
+
+  /* Sistema de espaciado (base 8 px: 8, 16, 24, 40, 64, 104, 168) */
+  --s-1: 0.5rem;    /* 8 px */
+  --s-2: 1rem;      /* 16 px */
+  --s-3: 1.5rem;    /* 24 px */
+  --s-4: 2.5rem;    /* 40 px */
+  --s-5: 4rem;      /* 64 px */
+  --s-6: 6.5rem;    /* 104 px */
+  --s-7: 10.5rem;   /* 168 px */
+
+  --section-space: var(--s-6);
+
+  /* Grilla y contenedor */
+  --container-max: 90rem; /* 1440 px */
+  --page-gutter: 1.25rem; /* 20 px mobile */
+  --grid-gap: var(--s-3);
+  --header-height: 5rem;  /* 80 px */
+
+  /* Movimiento: "El tiempo de una respiración" */
+  --ease-breath: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 300ms;
+  --dur-breath: 900ms;
+
+  /* Accesibilidad */
+  --touch-min: 2.75rem; /* 44 px */
+  --focus-ring: 2px solid var(--c-accent);
+  --focus-offset: 3px;
+}
+
+@media (min-width: 48rem) {
+  :root {
+    --page-gutter: 2.5rem; /* 40 px tablet */
+    --grid-gap: var(--s-4);
+  }
+}
+
+@media (min-width: 64rem) {
+  :root {
+    --page-gutter: 4rem;   /* 64 px desktop */
+    --section-space: var(--s-7); /* 168 px desktop */
+    --header-height: 5.75rem;
+  }
+}

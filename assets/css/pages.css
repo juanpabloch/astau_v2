@@ -1,0 +1,532 @@
+/* ==========================================================================
+   ASTAU — Estilos por Página (Inicio, Clases, Equipo, 404)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. INICIO (/)
+   -------------------------------------------------------------------------- */
+
+.hero {
+  position: relative;
+  min-block-size: 100dvh;
+  display: flex;
+  align-items: flex-end;
+  padding-block: calc(var(--header-height) + var(--s-5)) var(--s-5);
+  background-color: #3D2531;
+  color: var(--c-bg);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero__media {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+
+.hero__media picture,
+.hero__media img,
+.hero__media video {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    to bottom,
+    rgb(38 22 30 / 0.45) 0%,
+    rgb(38 22 30 / 0.25) 45%,
+    rgb(38 22 30 / 0.68) 100%
+  );
+}
+
+.hero__grid {
+  inline-size: 100%;
+  display: grid;
+  gap: var(--s-5);
+  align-items: end;
+}
+
+@media (min-width: 64rem) {
+  .hero__grid {
+    grid-template-columns: 8fr 4fr;
+  }
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+
+.hero__Lead {
+  font-size: clamp(1.1875rem, 0.6vw + 1.05rem, 1.5rem);
+  line-height: 1.45;
+  max-inline-size: 38ch;
+  color: var(--c-bg);
+}
+
+.hero__mantra {
+  margin-block-start: var(--s-2);
+  font-size: clamp(1.5rem, 2.2vw + 1rem, 2.75rem);
+  font-style: italic;
+  letter-spacing: var(--ls-quote);
+  line-height: 1.32;
+}
+
+.hero__actions {
+  margin-block-start: var(--s-2);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-3);
+}
+
+.hero__aside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--s-2);
+}
+
+@media (min-width: 64rem) {
+  .hero__aside {
+    align-items: flex-end;
+    text-align: right;
+  }
+}
+
+.hero__sound-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-1);
+  min-block-size: var(--touch-min);
+  padding-inline: var(--s-2);
+  padding-block: 0.5rem;
+  font-size: var(--fs-label);
+  font-weight: var(--fw-medium);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-label);
+  color: var(--c-bg);
+  border: 1px solid rgb(238 234 228 / 0.45);
+  background-color: rgb(38 22 30 / 0.35);
+}
+
+.hero__sound-btn:hover {
+  border-color: var(--c-bg);
+  background-color: rgb(38 22 30 / 0.6);
+}
+
+.hero__sound-indicator {
+  inline-size: 0.5rem;
+  block-size: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--c-surface);
+}
+
+.hero__sound-btn[aria-pressed="true"] .hero__sound-indicator {
+  background-color: #D6E3C8;
+}
+
+/* Manifiesto: Estructura apilada estilo presentación (regular arriba, negrita abajo) */
+.manifesto__pairs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+  margin-block-end: var(--s-4);
+}
+
+.manifesto__pair {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.manifesto__world {
+  color: var(--c-text);
+  font-size: clamp(1.375rem, 1.5vw + 1rem, 2rem);
+  font-weight: var(--fw-regular);
+  line-height: 1.25;
+}
+
+.manifesto__practice {
+  color: var(--c-text);
+  font-size: clamp(1.375rem, 1.5vw + 1rem, 2rem);
+  font-weight: var(--fw-bold);
+  line-height: 1.25;
+}
+
+.manifesto__practice strong {
+  font-weight: var(--fw-bold);
+}
+
+.manifesto__closing {
+  display: grid;
+  gap: var(--s-3);
+  align-items: end;
+}
+
+.manifesto__final {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.manifesto__statement {
+  color: var(--c-text);
+  font-size: clamp(1.75rem, 2.5vw + 1.1rem, 2.875rem);
+  font-weight: var(--fw-bold);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  max-inline-size: 24ch;
+}
+
+@media (min-width: 64rem) {
+  .manifesto__closing {
+    grid-template-columns: 1fr auto;
+    gap: var(--s-5);
+    align-items: end;
+  }
+
+  .manifesto__cta {
+    padding-block-end: 0.25rem;
+  }
+}
+
+/* El espacio (Asimetría controlada: 5–6 columnas de texto y cambio de lado) */
+.space-block {
+  display: grid;
+  gap: var(--s-5);
+  align-items: center;
+}
+
+@media (min-width: 64rem) {
+  .space-block {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: var(--s-4);
+  }
+
+  .space-block__media {
+    grid-column: 1 / 7;
+  }
+
+  .space-block__text {
+    grid-column: 8 / 13;
+  }
+}
+
+.space-block__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+
+/* Bloque Equipo en Inicio */
+.home-team__header {
+  display: grid;
+  gap: var(--s-3);
+  margin-block-end: var(--s-5);
+}
+
+@media (min-width: 64rem) {
+  .home-team__header {
+    grid-template-columns: 7fr 5fr;
+    align-items: end;
+  }
+}
+
+.home-team__list {
+  display: grid;
+  gap: var(--s-4);
+}
+
+@media (min-width: 48rem) {
+  .home-team__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 64rem) {
+  .home-team__list {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: var(--s-3);
+  }
+}
+
+.home-team__card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+
+.home-team__name {
+  font-size: 1.25rem;
+  font-weight: var(--fw-medium);
+}
+
+.home-team__role {
+  font-size: var(--fs-small);
+  color: var(--c-text);
+}
+
+/* Cierre a fondo pleno ciruela (Sección 4.2 y 6) */
+.closing-cta {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--s-4);
+}
+
+.closing-cta__logo {
+  block-size: 4.5rem;
+  inline-size: auto;
+}
+
+/* --------------------------------------------------------------------------
+   2. CLASES (/clases/)
+   -------------------------------------------------------------------------- */
+
+.page-hero {
+  padding-block-start: calc(var(--header-height) + var(--s-6));
+  padding-block-end: var(--s-5);
+  border-block-end: 1px solid var(--c-line);
+}
+
+.page-hero__grid {
+  display: grid;
+  gap: var(--s-3);
+}
+
+@media (min-width: 64rem) {
+  .page-hero__grid {
+    grid-template-columns: 7fr 5fr;
+    align-items: end;
+  }
+}
+
+/* Fichas de las 7 prácticas (asimetría controlada alternando lados) */
+.practice-detail {
+  padding-block: var(--s-6);
+  border-block-end: 1px solid var(--c-line);
+  display: grid;
+  gap: var(--s-4);
+  align-items: center;
+}
+
+@media (min-width: 64rem) {
+  .practice-detail {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .practice-detail__content {
+    grid-column: 1 / 7;
+  }
+
+  .practice-detail__media {
+    grid-column: 8 / 13;
+  }
+
+  .practice-detail:nth-child(even) .practice-detail__media {
+    grid-column: 1 / 6;
+    grid-row: 1;
+  }
+
+  .practice-detail:nth-child(even) .practice-detail__content {
+    grid-column: 7 / 13;
+    grid-row: 1;
+  }
+}
+
+.practice-detail__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+
+.practice-detail__subtitle {
+  font-size: var(--fs-small);
+  font-style: italic;
+  color: var(--c-text);
+  margin-block-start: -0.5rem;
+}
+
+.practice-detail__specs {
+  margin-block-start: var(--s-1);
+  padding-block: var(--s-2);
+  border-block: 1px solid var(--c-line);
+  display: grid;
+  gap: var(--s-1);
+  font-size: var(--fs-small);
+}
+
+.practice-detail__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+  align-items: center;
+}
+
+/* Abonos mensuales: lista tipográfica sin tarjetas (Sección 10) */
+.pricing-layout {
+  display: grid;
+  gap: var(--s-5);
+}
+
+@media (min-width: 64rem) {
+  .pricing-layout {
+    grid-template-columns: 6fr 5fr;
+    justify-content: space-between;
+    align-items: start;
+  }
+}
+
+.pricing-table {
+  inline-size: 100%;
+  border-collapse: collapse;
+  border-block-start: 1px solid var(--c-text);
+}
+
+.pricing-table tr {
+  border-block-end: 1px solid var(--c-line);
+}
+
+.pricing-table th,
+.pricing-table td {
+  padding-block: var(--s-3);
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-regular);
+  text-align: left;
+}
+
+.pricing-table td:last-child {
+  text-align: right;
+  font-weight: var(--fw-medium);
+  font-variant-numeric: tabular-nums;
+}
+
+.pricing-meditation {
+  margin-block-start: var(--s-4);
+  padding: var(--s-3);
+  background-color: rgb(179 183 174 / 0.25);
+  border-inline-start: 3px solid var(--c-accent);
+}
+
+.pricing-notes {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+
+.pricing-notes__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+
+.pricing-notes__item {
+  position: relative;
+  padding-inline-start: var(--s-3);
+  font-size: var(--fs-body);
+}
+
+.pricing-notes__item::before {
+  content: "—";
+  position: absolute;
+  inset-inline-start: 0;
+  color: var(--c-accent);
+}
+
+/* --------------------------------------------------------------------------
+   3. EQUIPO (/equipo/)
+   -------------------------------------------------------------------------- */
+
+.pillars-list {
+  border-block-start: 1px solid var(--c-line);
+}
+
+.pillars-item {
+  padding-block: var(--s-4);
+  border-block-end: 1px solid var(--c-line);
+  display: grid;
+  gap: var(--s-2);
+}
+
+@media (min-width: 48rem) {
+  .pillars-item {
+    grid-template-columns: 4fr 8fr;
+    align-items: baseline;
+  }
+}
+
+.team-bios {
+  display: flex;
+  flex-direction: column;
+}
+
+.bio-card {
+  padding-block: var(--s-6);
+  border-block-end: 1px solid var(--c-line);
+  display: grid;
+  gap: var(--s-5);
+  align-items: start;
+}
+
+@media (min-width: 64rem) {
+  .bio-card {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .bio-card__media {
+    grid-column: 1 / 5;
+  }
+
+  .bio-card__body {
+    grid-column: 6 / 12;
+  }
+
+  .bio-card:nth-child(even) .bio-card__media {
+    grid-column: 8 / 12;
+    grid-row: 1;
+  }
+
+  .bio-card:nth-child(even) .bio-card__body {
+    grid-column: 1 / 7;
+    grid-row: 1;
+  }
+}
+
+.bio-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+
+.bio-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-1);
+  align-items: center;
+}
+
+.bio-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.75rem;
+  font-size: var(--fs-label);
+  font-weight: var(--fw-medium);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-label);
+  border: 1px solid var(--c-line);
+  color: var(--c-text);
+}
+
+a.bio-tag:hover {
+  border-color: var(--c-accent);
+  background-color: var(--c-accent);
+  color: var(--c-bg);
+}
