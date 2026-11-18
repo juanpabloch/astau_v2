@@ -881,7 +881,7 @@
 
 .schedule-grid.has-filter .schedule-card.is-highlighted {
   border-color: var(--c-accent);
-  background-color: var(--c-surface);
+  background-color: var(--c-bg);
 }
 
 .schedule-card__time {

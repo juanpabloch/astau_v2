@@ -16,6 +16,8 @@ export function initReveal() {
     for (const el of els) el.classList.add("is-revealed");
   }
 
+  initHeroMantra(reduced);
+
   const links = document.querySelectorAll(".practices-index__link[data-preview-target]");
   const items = document.querySelectorAll(".practices-index__preview-item[data-preview-id]");
   for (const link of links) {
@@ -25,4 +27,41 @@ export function initReveal() {
     link.addEventListener("pointerenter", show);
     link.addEventListener("focus", show);
   }
+}
+
+function initHeroMantra(reduced) {
+  const mantra = document.querySelector(".hero__mantra");
+  if (!mantra || reduced) return;
+
+  const lines = mantra.querySelectorAll(".hero__mantra-line");
+  if (!lines.length) return;
+
+  let delay = 350;      /* Espera inicial antes de la 1ª frase (ms) */
+  const step = 900;     /* Tiempo entre el inicio de una frase y la siguiente (ms) */
+  const duration = 1800; /* Duración del recorrido/desenfoque de cada frase (ms) */
+
+  mantra.style.setProperty("--line-duration", `${duration}ms`);
+
+  lines.forEach((line, index) => {
+    if (index > 0) delay += step;
+    line.style.setProperty("--line-delay", `${delay}ms`);
+  });
+
+  if (!("IntersectionObserver" in window)) {
+    mantra.classList.add("is-visible");
+    return;
+  }
+
+  const obs = new IntersectionObserver((entries) => {
+    for (const e of entries) {
+      if (e.isIntersecting) {
+        window.requestAnimationFrame(() => {
+          mantra.classList.add("is-visible");
+        });
+        obs.unobserve(mantra);
+      }
+    }
+  }, { threshold: 0.15 });
+
+  obs.observe(mantra);
 }

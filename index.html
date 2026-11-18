@@ -20,20 +20,20 @@
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Iconos y Manifiesto -->
-  <link rel="icon" href="/astau_v2/favicon.svg" type="image/svg+xml">
-  <link rel="manifest" href="/astau_v2/site.webmanifest">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="./site.webmanifest">
   <meta name="theme-color" content="#EEEAE4">
 
   <!-- Preload recursos críticos (LCP poster y tipografía variable) -->
-  <link rel="preload" href="/astau_v2/assets/fonts/DMSans-Variable.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/astau_v2/assets/fonts/DMSans-Italic-Variable.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/astau_v2/assets/img/hero-astau.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="preload" href="./assets/fonts/DMSans-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/fonts/DMSans-Italic-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/img/hero-astau.webp" as="image" type="image/webp" fetchpriority="high">
 
   <!-- Hojas de estilo -->
-  <link rel="stylesheet" href="/astau_v2/assets/css/tokens.css">
-  <link rel="stylesheet" href="/astau_v2/assets/css/base.css">
-  <link rel="stylesheet" href="/astau_v2/assets/css/components.css">
-  <link rel="stylesheet" href="/astau_v2/assets/css/pages.css">
+  <link rel="stylesheet" href="./assets/css/tokens.css">
+  <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="./assets/css/components.css">
+  <link rel="stylesheet" href="./assets/css/pages.css">
 
   <!-- Datos estructurados JSON-LD (SportsActivityLocation + WebSite) -->
   <script type="application/ld+json">
@@ -115,16 +115,16 @@
   <!-- Header -->
   <header class="site-header site-header--hero">
     <div class="container site-header__inner">
-      <a class="site-logo" href="/astau_v2/" aria-label="ASTAU — Inicio">
-        <img class="site-logo__img site-logo__img--color" src="/astau_v2/assets/brand/logo-color.svg" width="90" height="121" alt="ASTAU">
-        <img class="site-logo__img site-logo__img--light" src="/astau_v2/assets/brand/logo-negativo.svg" width="90" height="121" alt="ASTAU">
+      <a class="site-logo" href="./" aria-label="ASTAU — Inicio">
+        <img class="site-logo__img site-logo__img--color" src="./assets/brand/logo-color.svg" width="90" height="121" alt="ASTAU">
+        <img class="site-logo__img site-logo__img--light" src="./assets/brand/logo-negativo.svg" width="90" height="121" alt="ASTAU">
       </a>
 
       <nav class="site-nav" aria-label="Navegación principal">
         <ul class="site-nav__list">
-          <li><a class="site-nav__link" href="/astau_v2/" aria-current="page">Inicio</a></li>
-          <li><a class="site-nav__link" href="/astau_v2/clases/">Clases</a></li>
-          <li><a class="site-nav__link" href="/astau_v2/equipo/">Equipo</a></li>
+          <li><a class="site-nav__link" href="./" aria-current="page">Inicio</a></li>
+          <li><a class="site-nav__link" href="./clases/">Clases</a></li>
+          <li><a class="site-nav__link" href="./equipo/">Equipo</a></li>
           <li><a class="site-nav__link" href="#contacto">Contacto</a></li>
         </ul>
 
@@ -151,9 +151,9 @@
   <div id="mobile-menu" class="mobile-menu" role="dialog" aria-label="Menú de navegación" hidden>
     <nav aria-label="Navegación móvil">
       <ul class="mobile-menu__list">
-        <li><a class="mobile-menu__link" href="/astau_v2/" aria-current="page">Inicio</a></li>
-        <li><a class="mobile-menu__link" href="/astau_v2/clases/">Clases</a></li>
-        <li><a class="mobile-menu__link" href="/astau_v2/equipo/">Equipo</a></li>
+        <li><a class="mobile-menu__link" href="./" aria-current="page">Inicio</a></li>
+        <li><a class="mobile-menu__link" href="./clases/">Clases</a></li>
+        <li><a class="mobile-menu__link" href="./equipo/">Equipo</a></li>
         <li><a class="mobile-menu__link" href="#contacto">Contacto</a></li>
       </ul>
     </nav>
@@ -184,15 +184,15 @@
           id="hero-video"
           width="1920"
           height="1080"
-          poster="/assets/img/hero-astau.webp"
+          poster="assets/img/hero-astau.webp"
           preload="none"
           loop
           muted
           playsinline
           aria-hidden="true"
         >
-          <source src="/astau_v2/assets/video/hero-astau.webm" type="video/webm">
-          <source src="/astau_v2/assets/video/hero-astau.mp4" type="video/mp4">
+          <source src="./assets/video/hero-astau.webm" type="video/webm">
+          <source src="./assets/video/hero-astau.mp4" type="video/mp4">
         </video>
         <span class="media__badge" aria-hidden="true">hero-astau</span>
       </div>
@@ -205,9 +205,9 @@
           <p class="hero__Lead">Una práctica personal que se construye con guía y en comunidad.</p>
 
           <p class="hero__mantra">
-            Respirar.<br>
-            Observar.<br>
-            Estar presente.
+            <span class="hero__mantra-line">Respirar.</span>
+            <span class="hero__mantra-line">Observar.</span>
+            <span class="hero__mantra-line">Estar presente.</span>
           </p>
 
           <div class="hero__actions">
@@ -219,7 +219,7 @@
               data-track="clic_whatsapp"
               data-track-location="hero"
             >Agendá tu práctica</a>
-            <a class="btn btn--secondary" style="color: var(--c-bg); border-color: rgb(238 234 228 / 0.6);" href="/astau_v2/clases/#horarios">Ver horarios</a>
+            <a class="btn btn--secondary" style="color: var(--c-bg); border-color: rgb(238 234 228 / 0.6);" href="./clases/#horarios">Ver horarios</a>
           </div>
         </div>
 
@@ -252,57 +252,57 @@
 
         <ul class="practices-cards" data-reveal>
           <li class="practices-card-item">
-            <a class="practice-card-link" href="/astau_v2/clases/#ashtanga" data-track="ver_practica" data-track-practice="Ashtanga">
+            <a class="practice-card-link" href="./clases/#ashtanga" data-track="ver_practica" data-track-practice="Ashtanga">
               <article class="practice-card">
-                <img class="practice-card__img" src="/astau_v2/assets/img/practica-ashtanga.webp" alt="" width="600" height="750" loading="lazy">
+                <img class="practice-card__img" src="./assets/img/practica-ashtanga.webp" alt="" width="600" height="750" loading="lazy">
                 <h3 class="practice-card__title">Ashtanga</h3>
               </article>
             </a>
           </li>
           <li class="practices-card-item">
-            <a class="practice-card-link" href="/astau_v2/clases/#yin-yoga" data-track="ver_practica" data-track-practice="Yin Yoga">
+            <a class="practice-card-link" href="./clases/#yin-yoga" data-track="ver_practica" data-track-practice="Yin Yoga">
               <article class="practice-card">
-                <img class="practice-card__img" src="/astau_v2/assets/img/practica-yin.webp" alt="" width="600" height="750" loading="lazy">
+                <img class="practice-card__img" src="./assets/img/practica-yin.webp" alt="" width="600" height="750" loading="lazy">
                 <h3 class="practice-card__title">Yin Yoga</h3>
               </article>
             </a>
           </li>
           <li class="practices-card-item">
-            <a class="practice-card-link" href="/astau_v2/clases/#hatha-yoga" data-track="ver_practica" data-track-practice="Hatha Yoga">
+            <a class="practice-card-link" href="./clases/#hatha-yoga" data-track="ver_practica" data-track-practice="Hatha Yoga">
               <article class="practice-card">
-                <img class="practice-card__img" src="/astau_v2/assets/img/practica-hatha.webp" alt="" width="600" height="750" loading="lazy">
+                <img class="practice-card__img" src="./assets/img/practica-hatha.webp" alt="" width="600" height="750" loading="lazy">
                 <h3 class="practice-card__title">Hatha Yoga</h3>
               </article>
             </a>
           </li>
           <li class="practices-card-item">
-            <a class="practice-card-link" href="/astau_v2/clases/#yoga-terapia" data-track="ver_practica" data-track-practice="Yoga Terapia">
+            <a class="practice-card-link" href="./clases/#yoga-terapia" data-track="ver_practica" data-track-practice="Yoga Terapia">
               <article class="practice-card">
-                <img class="practice-card__img" src="/astau_v2/assets/img/practica-terapia.webp" alt="" width="600" height="750" loading="lazy">
+                <img class="practice-card__img" src="./assets/img/practica-terapia.webp" alt="" width="600" height="750" loading="lazy">
                 <h3 class="practice-card__title">Yoga Terapia</h3>
               </article>
             </a>
           </li>
           <li class="practices-card-item">
-            <a class="practice-card-link" href="/astau_v2/clases/#yoga-embarazo" data-track="ver_practica" data-track-practice="Yoga & Embarazo">
+            <a class="practice-card-link" href="./clases/#yoga-embarazo" data-track="ver_practica" data-track-practice="Yoga & Embarazo">
               <article class="practice-card">
-                <img class="practice-card__img" src="/astau_v2/assets/img/practica-embarazo.webp" alt="" width="600" height="750" loading="lazy">
+                <img class="practice-card__img" src="./assets/img/practica-embarazo.webp" alt="" width="600" height="750" loading="lazy">
                 <h3 class="practice-card__title">Yoga Prenatal</h3>
               </article>
             </a>
           </li>
           <li class="practices-card-item">
-            <a class="practice-card-link" href="/astau_v2/clases/#yoga-maternidad" data-track="ver_practica" data-track-practice="Yoga & Maternidad">
+            <a class="practice-card-link" href="./clases/#yoga-maternidad" data-track="ver_practica" data-track-practice="Yoga & Maternidad">
               <article class="practice-card">
-                <img class="practice-card__img" src="/astau_v2/assets/img/practica-maternidad.webp" alt="" width="600" height="750" loading="lazy">
+                <img class="practice-card__img" src="./assets/img/practica-maternidad.webp" alt="" width="600" height="750" loading="lazy">
                 <h3 class="practice-card__title">Yoga Postnatal</h3>
               </article>
             </a>
           </li>
           <li class="practices-card-item">
-            <a class="practice-card-link" href="/astau_v2/clases/#meditacion" data-track="ver_practica" data-track-practice="Meditación">
+            <a class="practice-card-link" href="./clases/#meditacion" data-track="ver_practica" data-track-practice="Meditación">
               <article class="practice-card">
-                <img class="practice-card__img" src="/astau_v2/assets/img/practica-meditacion.webp" alt="" width="600" height="750" loading="lazy">
+                <img class="practice-card__img" src="./assets/img/practica-meditacion.webp" alt="" width="600" height="750" loading="lazy">
                 <h3 class="practice-card__title">Meditación</h3>
               </article>
             </a>
@@ -310,8 +310,8 @@
         </ul>
 
         <div style="margin-block-start: var(--s-4); display: flex; flex-wrap: wrap; gap: var(--s-3);" data-reveal>
-          <a class="btn btn--primary" href="/astau_v2/clases/#horarios">Ver horarios</a>
-          <a class="btn btn--secondary" href="/astau_v2/clases/">Explorar todas las prácticas</a>
+          <a class="btn btn--primary" href="./clases/#horarios">Ver horarios</a>
+          <a class="btn btn--secondary" href="./clases/">Explorar todas las prácticas</a>
         </div>
       </div>
     </section>
@@ -322,29 +322,29 @@
         <h2 id="manifiesto-titulo" class="sr-only">Manifiesto ASTAU</h2>
 
         <div class="manifesto__pairs">
-          <div class="manifesto__pair" data-reveal>
+          <div class="manifesto__pair" data-reveal style="--reveal-delay: 100ms;">
             <p class="manifesto__world">El mundo pide velocidad.</p>
             <p class="manifesto__practice"><strong>La práctica pide presencia.</strong></p>
           </div>
 
-          <div class="manifesto__pair" data-reveal>
+          <div class="manifesto__pair" data-reveal style="--reveal-delay: 500ms;">
             <p class="manifesto__world">El mundo pide rendimiento.</p>
             <p class="manifesto__practice"><strong>La práctica propone observación.</strong></p>
           </div>
 
-          <div class="manifesto__pair" data-reveal>
+          <div class="manifesto__pair" data-reveal style="--reveal-delay: 850ms;">
             <p class="manifesto__world">El mundo busca resultados.</p>
             <p class="manifesto__practice"><strong>La práctica trabaja sobre el proceso.</strong></p>
           </div>
         </div>
 
-        <div class="manifesto__closing" data-reveal>
+        <div class="manifesto__closing" data-reveal style="--reveal-delay: 1200ms;">
           <div class="manifesto__final">
             <p class="manifesto__world">El mundo está lleno de estímulos.</p>
             <p class="manifesto__statement">En ASTAU creamos un espacio para que vuelvas a conectar con vos</p>
           </div>
           <div class="manifesto__cta">
-            <a class="link-editorial" href="/astau_v2/equipo/">Conocé más</a>
+            <a class="link-editorial" href="./equipo/">Conocé más</a>
           </div>
         </div>
       </div>
@@ -358,16 +358,16 @@
             <picture>
               <source
                 type="image/avif"
-                srcset="/astau_v2/assets/img/espacio-astau.avif 720w, /astau_v2/assets/img/espacio-astau-2x.avif 1440w"
+                srcset="./assets/img/espacio-astau.avif 720w, ./assets/img/espacio-astau-2x.avif 1440w"
                 sizes="(max-width: 1023px) 100vw, 50vw"
               >
               <source
                 type="image/webp"
-                srcset="/astau_v2/assets/img/espacio-astau.webp 720w, /astau_v2/assets/img/espacio-astau-2x.webp 1440w"
+                srcset="./assets/img/espacio-astau.webp 720w, ./assets/img/espacio-astau-2x.webp 1440w"
                 sizes="(max-width: 1023px) 100vw, 50vw"
               >
               <img
-                src="/astau_v2/assets/img/espacio-astau.webp"
+                src="./assets/img/espacio-astau.webp"
                 alt="Luz natural sobre el piso de madera en la sala de práctica de ASTAU en Recoleta"
                 width="720"
                 height="480"
@@ -391,7 +391,7 @@
             Porque cada persona es diferente. Cada momento también. Y una misma práctica puede ser una experiencia distinta cada vez. En ASTAU, cada práctica es una experiencia personal.
           </p>
           <div style="margin-block-start: var(--s-2);">
-            <a class="link-editorial" href="/astau_v2/equipo/">Conocé más</a>
+            <a class="link-editorial" href="./equipo/">Conocé más</a>
           </div>
         </div>
       </div>
@@ -415,19 +415,19 @@
               Nuestro equipo guía y acompaña de manera personalizada cada recorrido con atención, cuidado y respeto.
             </p>
             <div style="margin-block-start: var(--s-2);">
-              <a class="link-editorial" href="/astau_v2/equipo/">Conocé al equipo</a>
+              <a class="link-editorial" href="./equipo/">Conocé al equipo</a>
             </div>
           </div>
         </div>
 
         <ul class="home-team__list">
           <li class="home-team__card" data-reveal>
-            <a href="/astau_v2/equipo/#constanza-iselli">
+            <a href="./equipo/#constanza-iselli">
               <figure class="media media--4-5" style="margin-block-end: var(--s-2);">
                 <picture>
-                  <source type="image/avif" srcset="/astau_v2/assets/img/equipo-constanza.avif 520w, /astau_v2/assets/img/equipo-constanza-2x.avif 1040w" sizes="(max-width: 767px) 100vw, 20vw">
-                  <source type="image/webp" srcset="/astau_v2/assets/img/equipo-constanza.webp 520w, /astau_v2/assets/img/equipo-constanza-2x.webp 1040w" sizes="(max-width: 767px) 100vw, 20vw">
-                  <img src="/astau_v2/assets/img/equipo-constanza.webp" alt="Retrato de Constanza Iselli, fundadora y guía de Ashtanga y Meditación en ASTAU" width="520" height="650" loading="lazy">
+                  <source type="image/avif" srcset="./assets/img/equipo-constanza.avif 520w, ./assets/img/equipo-constanza-2x.avif 1040w" sizes="(max-width: 767px) 100vw, 20vw">
+                  <source type="image/webp" srcset="./assets/img/equipo-constanza.webp 520w, ./assets/img/equipo-constanza-2x.webp 1040w" sizes="(max-width: 767px) 100vw, 20vw">
+                  <img src="./assets/img/equipo-constanza.webp" alt="Retrato de Constanza Iselli, fundadora y guía de Ashtanga y Meditación en ASTAU" width="520" height="650" loading="lazy">
                 </picture>
                 <span class="media__badge" aria-hidden="true">equipo-constanza</span>
               </figure>
@@ -437,12 +437,12 @@
           </li>
 
           <li class="home-team__card" data-reveal style="--reveal-delay: 80ms;">
-            <a href="/astau_v2/equipo/#jesica-doldan">
+            <a href="./equipo/#jesica-doldan">
               <figure class="media media--4-5" style="margin-block-end: var(--s-2);">
                 <picture>
-                  <source type="image/avif" srcset="/astau_v2/assets/img/equipo-jesica.avif 520w, /astau_v2/assets/img/equipo-jesica-2x.avif 1040w" sizes="(max-width: 767px) 100vw, 20vw">
-                  <source type="image/webp" srcset="/astau_v2/assets/img/equipo-jesica.webp 520w, /astau_v2/assets/img/equipo-jesica-2x.webp 1040w" sizes="(max-width: 767px) 100vw, 20vw">
-                  <img src="/astau_v2/assets/img/equipo-jesica.webp" alt="Retrato de Jésica Doldan, guía de Hatha Yoga, Yoga y Embarazo, y Yoga y Maternidad en ASTAU" width="520" height="650" loading="lazy">
+                  <source type="image/avif" srcset="./assets/img/equipo-jesica.avif 520w, ./assets/img/equipo-jesica-2x.avif 1040w" sizes="(max-width: 767px) 100vw, 20vw">
+                  <source type="image/webp" srcset="./assets/img/equipo-jesica.webp 520w, ./assets/img/equipo-jesica-2x.webp 1040w" sizes="(max-width: 767px) 100vw, 20vw">
+                  <img src="./assets/img/equipo-jesica.webp" alt="Retrato de Jésica Doldan, guía de Hatha Yoga, Yoga y Embarazo, y Yoga y Maternidad en ASTAU" width="520" height="650" loading="lazy">
                 </picture>
                 <span class="media__badge" aria-hidden="true">equipo-jesica</span>
               </figure>
@@ -452,12 +452,12 @@
           </li>
 
           <li class="home-team__card" data-reveal style="--reveal-delay: 160ms;">
-            <a href="/astau_v2/equipo/#lucia-larroude">
+            <a href="./equipo/#lucia-larroude">
               <figure class="media media--4-5" style="margin-block-end: var(--s-2);">
                 <picture>
-                  <source type="image/avif" srcset="/astau_v2/assets/img/equipo-lucia.avif 520w, /astau_v2/assets/img/equipo-lucia-2x.avif 1040w" sizes="(max-width: 767px) 100vw, 20vw">
-                  <source type="image/webp" srcset="/astau_v2/assets/img/equipo-lucia.webp 520w, /astau_v2/assets/img/equipo-lucia-2x.webp 1040w" sizes="(max-width: 767px) 100vw, 20vw">
-                  <img src="/astau_v2/assets/img/equipo-lucia.webp" alt="Retrato de Lucía Larroudé, guía de Yin Yoga y Meditación en ASTAU" width="520" height="650" loading="lazy">
+                  <source type="image/avif" srcset="./assets/img/equipo-lucia.avif 520w, ./assets/img/equipo-lucia-2x.avif 1040w" sizes="(max-width: 767px) 100vw, 20vw">
+                  <source type="image/webp" srcset="./assets/img/equipo-lucia.webp 520w, ./assets/img/equipo-lucia-2x.webp 1040w" sizes="(max-width: 767px) 100vw, 20vw">
+                  <img src="./assets/img/equipo-lucia.webp" alt="Retrato de Lucía Larroudé, guía de Yin Yoga y Meditación en ASTAU" width="520" height="650" loading="lazy">
                 </picture>
                 <span class="media__badge" aria-hidden="true">equipo-lucia</span>
               </figure>
@@ -467,12 +467,12 @@
           </li>
 
           <li class="home-team__card" data-reveal style="--reveal-delay: 240ms;">
-            <a href="/astau_v2/equipo/#paz-rufino">
+            <a href="./equipo/#paz-rufino">
               <figure class="media media--4-5" style="margin-block-end: var(--s-2);">
                 <picture>
-                  <source type="image/avif" srcset="/astau_v2/assets/img/equipo-paz.avif 520w, /astau_v2/assets/img/equipo-paz-2x.avif 1040w" sizes="(max-width: 767px) 100vw, 20vw">
-                  <source type="image/webp" srcset="/astau_v2/assets/img/equipo-paz.webp 520w, /astau_v2/assets/img/equipo-paz-2x.webp 1040w" sizes="(max-width: 767px) 100vw, 20vw">
-                  <img src="/astau_v2/assets/img/equipo-paz.webp" alt="Retrato de Paz Rufino, guía de Ashtanga en ASTAU" width="520" height="650" loading="lazy">
+                  <source type="image/avif" srcset="./assets/img/equipo-paz.avif 520w, ./assets/img/equipo-paz-2x.avif 1040w" sizes="(max-width: 767px) 100vw, 20vw">
+                  <source type="image/webp" srcset="./assets/img/equipo-paz.webp 520w, ./assets/img/equipo-paz-2x.webp 1040w" sizes="(max-width: 767px) 100vw, 20vw">
+                  <img src="./assets/img/equipo-paz.webp" alt="Retrato de Paz Rufino, guía de Ashtanga en ASTAU" width="520" height="650" loading="lazy">
                 </picture>
                 <span class="media__badge" aria-hidden="true">equipo-paz</span>
               </figure>
@@ -482,12 +482,12 @@
           </li>
 
           <li class="home-team__card" data-reveal style="--reveal-delay: 320ms;">
-            <a href="/astau_v2/equipo/#melisa-larsen">
+            <a href="./equipo/#melisa-larsen">
               <figure class="media media--4-5" style="margin-block-end: var(--s-2);">
                 <picture>
-                  <source type="image/avif" srcset="/astau_v2/assets/img/equipo-melisa.avif 520w, /astau_v2/assets/img/equipo-melisa-2x.avif 1040w" sizes="(max-width: 767px) 100vw, 20vw">
-                  <source type="image/webp" srcset="/astau_v2/assets/img/equipo-melisa.webp 520w, /astau_v2/assets/img/equipo-melisa-2x.webp 1040w" sizes="(max-width: 767px) 100vw, 20vw">
-                  <img src="/astau_v2/assets/img/equipo-melisa.webp" alt="Retrato de Melisa Larsen, guía de Yoga Terapia en ASTAU" width="520" height="650" loading="lazy">
+                  <source type="image/avif" srcset="./assets/img/equipo-melisa.avif 520w, ./assets/img/equipo-melisa-2x.avif 1040w" sizes="(max-width: 767px) 100vw, 20vw">
+                  <source type="image/webp" srcset="./assets/img/equipo-melisa.webp 520w, ./assets/img/equipo-melisa-2x.webp 1040w" sizes="(max-width: 767px) 100vw, 20vw">
+                  <img src="./assets/img/equipo-melisa.webp" alt="Retrato de Melisa Larsen, guía de Yoga Terapia en ASTAU" width="520" height="650" loading="lazy">
                 </picture>
                 <span class="media__badge" aria-hidden="true">equipo-melisa</span>
               </figure>
@@ -502,7 +502,7 @@
     <!-- 4. CIERRE A FONDO CIRUELA -->
     <section class="section section--plum theme-plum" aria-labelledby="cierre-titulo">
       <div class="container closing-cta" data-reveal>
-        <img class="closing-cta__logo" src="/astau_v2/assets/brand/logo-negativo.svg" width="110" height="148" alt="ASTAU">
+        <img class="closing-cta__logo" src="./assets/brand/logo-negativo.svg" width="110" height="148" alt="ASTAU">
         <h2 id="cierre-titulo" class="t-quote" style="max-inline-size: 28ch;">
           Un espacio íntimo para encontrar tu ritmo, conectar con el cuerpo, la respiración y el momento presente.
         </h2>
@@ -515,7 +515,7 @@
             data-track="clic_whatsapp"
             data-track-location="cierre"
           >Agendá tu práctica</a>
-          <a class="btn btn--secondary" style="color: var(--c-bg); border-color: rgb(238 234 228 / 0.6);" href="/astau_v2/clases/#horarios">Consultar horarios</a>
+          <a class="btn btn--secondary" style="color: var(--c-bg); border-color: rgb(238 234 228 / 0.6);" href="./clases/#horarios">Consultar horarios</a>
         </div>
       </div>
     </section>
@@ -527,8 +527,8 @@
       <div class="site-footer__top">
         <!-- Columna 1: Marca y Sala -->
         <div class="site-footer__col site-footer__col--brand">
-          <a class="site-footer__logo" href="/astau_v2/" aria-label="ASTAU — Inicio">
-            <img src="/astau_v2/assets/brand/logo-color.svg" width="84" height="113" alt="ASTAU">
+          <a class="site-footer__logo" href="./" aria-label="ASTAU — Inicio">
+            <img src="./assets/brand/logo-color.svg" width="84" height="113" alt="ASTAU">
           </a>
           <p class="site-footer__lead">
             Un espacio íntimo en Recoleta equipado con elementos de la más alta calidad para acompañar tu práctica de yoga y meditación.
@@ -601,10 +601,10 @@
         <div class="site-footer__col">
           <h2 class="site-footer__heading">Explorar</h2>
           <ul class="site-footer__list site-footer__list--nav">
-            <li><a class="site-footer__nav-link" href="/astau_v2/">Inicio</a></li>
-            <li><a class="site-footer__nav-link" href="/astau_v2/clases/">Clases y prácticas</a></li>
-            <li><a class="site-footer__nav-link" href="/astau_v2/clases/#preguntas">Preguntas frecuentes</a></li>
-            <li><a class="site-footer__nav-link" href="/astau_v2/equipo/">Equipo docente</a></li>
+            <li><a class="site-footer__nav-link" href="./">Inicio</a></li>
+            <li><a class="site-footer__nav-link" href="./clases/">Clases y prácticas</a></li>
+            <li><a class="site-footer__nav-link" href="./clases/#preguntas">Preguntas frecuentes</a></li>
+            <li><a class="site-footer__nav-link" href="./equipo/">Equipo docente</a></li>
           </ul>
         </div>
       </div>
@@ -616,6 +616,6 @@
     </div>
   </footer>
 
-  <script type="module" src="/astau_v2/assets/js/main.js"></script>
+  <script type="module" src="./assets/js/main.js"></script>
 </body>
 </html>
